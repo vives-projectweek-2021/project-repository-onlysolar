@@ -72,7 +72,7 @@ Goals:
 * Creating a database with InfluxDB and sending all the data
 * Visualizing the data in a Grafana dashboard
 
-Early stage and testing                                   |  Final wiring
-:--------------------------------------------:|:-------------------------------------------------:
-![NucleoPi](./images_readme/nucleopi.png)       |   ![finalwiring](./images_readme/bekabeling.jpg)
+Final wiring |
+:-------------------------------------------------:
+![finalwiring](./images_readme/bekabeling.jpg)
 
