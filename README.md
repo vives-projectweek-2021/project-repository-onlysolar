@@ -51,7 +51,7 @@ Goals:
 
 3D printed components                                | Render LDR holder
 :--------------------------------------------:|:-------------------------------------------------:
-![3Dstukken](./images_readme/3dstukken.jpg)  |  ![renderLDR](./images_readme/renderldrhouder.png)
+![3Dstukken](./images_readme/3dstukken.jpg)   |  ![renderLDR](./images_readme/renderldrhouder.png)
 
 The complexity of 3D design                               | Designing with AutoCad
 :--------------------------------------------:|:-------------------------------------------------:
@@ -69,8 +69,10 @@ Who:
 Goals:
 
 * Setting up the communication between the Nucleo (microcontroller) and the Raspberry Pi
-* 
-* 
-* 
+* Creating a database with InfluxDB and sending all the data
+* Visualizing the data in a Grafana dashboard
 
-![NucleoPi](./images_readme/nucleopi.png)
+Early stage and testing                                   |  Final wiring
+:--------------------------------------------:|:-------------------------------------------------:
+![NucleoPi](./images_readme/nucleopi.png)       |   ![finalwiring](./images_readme/bekabeling.jpg)
+
