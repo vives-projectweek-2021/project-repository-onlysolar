@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin: 10px;
+  color: white;
+  font-size: 45;
+  margin-top: 25px;
+}
+
+body {
+  background-image: url("background/solar1.jpg");
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+iframe {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: 150px;
+  margin-left: 100px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  margin-bottom: 40px;
+}
+
+.github {
+  font-size: 30px;
+}
