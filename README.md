@@ -75,4 +75,3 @@ Goals:
 Final wiring |
 :-------------------------------------------------:
 ![finalwiring](./images_readme/bekabeling.jpg)
-
