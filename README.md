@@ -1,78 +1,58 @@
 ﻿# OnlySolar
 
-## Goals
-
-The goal of our project is to get the maximum efficiency out of a solar panel by rotating it towards the sun with the help of servos and LDRs. The LDRs are isolated from each other so they each individually check a part of the sky. A microcontroller will read the values of those LDRs to control the servos that will aim the solar panel towards the sun. That solar panel will charge a LiPo battery with the help of a solar charger board. The data from the sensors, servos and the solar panel will be sent by the microcontroller to a Raspberry Pi which in turn processes it for viewing this data on a website. This allows us to watch the solar flower without actually physically seeing it.
+![Logo](./images_readme/intro.jpg)
 
 ## Team Members
 
-- Rayan Azzi
-- Noah Debaere
-- Jens Vanhove
-- Maxime Vansteelandt
+* Rayan Azzi
+* Noah Debaere
+* Jens Vanhove
+* Maxime Vansteelandt
 
-## Project Analysis
+## Materials
 
-### Hardware
+* Nucleo LR479-RG
+* Raspberry Pi 4
+* Solar panel
+* 2x Tower Pro MG995 servos
+* 4x LDR resistors 33K
+* 2x resistors 1K
+* 2x INA260 sensors
+* 3D printed components
+* Solar Charger Shield v2.2
+* 1-cell 3.7V Lipo for charging
+* 2-cell 7.4V Lipo for powering the servos
 
-The hardware part of our project is very important, it allows the solar panel to actually move to the sun to charge a battery. Therefore, servos need to be commanded by some kind of sensor that is able to track the sun. A microcontroller makes all of this possible, so this must be programmed too.
+## Connecting the hardware
 
-Who:
+![Circuit diagram](./images_readme/solar_shematic.jpg)
 
-- Jens
-- Maxime
+This is the circuit diagram of our project. Everything is connected with cables and jumper wires to a breadboard. Both ends of the LDRs are soldered to a wire inside of an ethernet cable.
 
-Goals:
+![Backside](./images_readme/connecties_achterkant.jpg)
 
-- Reading the values from the LDRs to detect the source of light
-- Writing code for controlling the servos
-- Reading values from the voltage and current sensors that read the power of the solar panel and the voltage of the battery.
-- Putting all the code in one program with the addition of extra functionality that enables calibration of the SolarFlower
-- Creating a temporary model for the proof of concept evaluation
-- Creating a final model that puts all the components in a wooden box with the rotating solar panel on top.
+This is how it looks from the backside. The servos are connected with the solar panel with the help of the 3D printed components (green and yellow). The solar panel and LDRs are attached to a wooden plate. Make sure that the servos are kept well in place, you don't want them to move around. You can also see the ethernet cable coming from the LDRs and going inside the box. Make sure that enough cable is left over, otherwise the servos could get stuck.
 
-|                        Testing LDRs                         |                    Temporary model                    |
-| :---------------------------------------------------------: | :---------------------------------------------------: |
-| ![LDRtestopstelling](./images_readme/ldrtestopstelling.jpg) | ![testopstelling](./images_readme/testopstelling.jpg) |
+## Setting up the Nucleo
 
-### Design - 3D printing
+Install the Mbed CLI from [here](https://os.mbed.com/docs/mbed-os/v5.15/quick-start/offline-with-mbed-cli.html)
 
-Somehow the servos, LDRs and solar panel need to be connected in a way that everything can move towards the sun. This is a complex challenge, which is why we opted for 3D printing. 3D printing takes a lot of work behind the scenes to draw everything, but the result is exactly what you had in mind.
+Execute the following:
 
-Who:
+```shell
+mbed import http://os.mbed.com/users/jensva/code/Mainprogramtest/
+```
 
-- Rayan
+Install the GNU Arm Embedded Toolchain from [here](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads)
 
-Goals:
+At the end of the installation, select `Add path to environent table`. However, the mbed-cli installer contains an older version of the toolchain. Remove it from your path. To do so, go to System properties > Advanced > Environment Variables > Edit. Remove it from your Path.
 
-- Making a sketch of the concept
-- Designing the components with AutoCad
-- Printing the components
+Finally, make sure that the Nucleo is connected to your PC and execute following compilation command:
 
-|            3D printed components            |                 Render LDR holder                 |
-| :-----------------------------------------: | :-----------------------------------------------: |
-| ![3Dstukken](./images_readme/3dstukken.jpg) | ![renderLDR](./images_readme/renderldrhouder.png) |
+```shell
+mbed compile --target NUCLEO_L476RG --toolchain GCC_ARM --flash
+```
 
-|          The complexity of 3D design           |                  Designing with AutoCad                  |
-| :--------------------------------------------: | :------------------------------------------------------: |
-| ![blueprint](./images_readme/blueprint3d.jpeg) | ![3dpiecestogether](./images_readme/3dstukkensamen.jpeg) |
+The code should compile automatically, and the bin file will be flashed to the Nucleo.
 
-### Data Visualization
-
-The goal of data visualization is to watch the solar flower without actually physically seeing it. This is achieved by sending data from the solar panels and servos to a Raspberry Pi which in turn processes it for viewing this data on a website.
-
-Who:
-
-- Rayan
-- Noah
-
-Goals:
-
-- Setting up the communication between the Nucleo (microcontroller) and the Raspberry Pi
-- Creating a database with InfluxDB and sending all the data
-- Visualizing the data in a Grafana dashboard
-
-Final wiring |
-:-------------------------------------------------:
-![finalwiring](./images_readme/bekabeling.jpg)
-![finalwiring](./images_readme/solar_shematic.jpg)
+## Setting op the Raspberry Pi
