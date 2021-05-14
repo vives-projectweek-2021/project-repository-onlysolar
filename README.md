@@ -56,3 +56,11 @@ mbed compile --target NUCLEO_L476RG --toolchain GCC_ARM --flash
 The code should compile automatically, and the bin file will be flashed to the Nucleo.
 
 ## Setting op the Raspberry Pi
+
+Under construction...
+
+## Netlify
+
+The Netlify page is linked to a personal GitHub repository that contains all of the code inside of the `website` folder. To link a netlify page to your GitHub, you can follow the steps on [this](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/) page.
+
+ If Netlify is linked, you can change the name of that page. Our page calls "solar-flower.netlify.app. You can visit our page [here](https://solar-flower.netl²ify.app)
