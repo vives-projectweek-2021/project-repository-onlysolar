@@ -2,6 +2,8 @@
 
 ![Logo](./images_readme/intro.jpg)
 
+[Link to YouTube video](https://www.youtube.com/watch?v=ZZ_ORB39aEs)
+
 ## Team Members
 
 * Rayan Azzi
