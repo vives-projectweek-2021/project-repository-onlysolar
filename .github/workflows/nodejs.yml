@@ -1,0 +1,13 @@
+name: Linter
+
+on: [push]
+
+jobs:
+  build:
+    name: Linters
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - run: npm install
+    - name: Markdown
+      run: npm run lint-markdown

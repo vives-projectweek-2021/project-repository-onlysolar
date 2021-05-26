@@ -63,6 +63,8 @@ The code should compile automatically, and the bin file will be flashed to the N
 
 ## Setting op the Raspberry Pi
 
+When using the
+
 ### Setting up the VSCode connection with the Raspberry Pi via SSH
 
 ### Running the Python script
