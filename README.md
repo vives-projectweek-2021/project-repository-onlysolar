@@ -1,6 +1,8 @@
 ﻿# OnlySolar
 
-![Logo](./images_readme/intro.jpg)
+[![Linter](../../actions/workflows/nodejs.yml/badge.svg)](./actions/workflows/nodejs.yml)
+
+![Logo](img/intro.jpg)
 
 [Link to YouTube video](https://www.youtube.com/watch?v=ZZ_ORB39aEs)
 
@@ -27,11 +29,11 @@
 
 ## Connecting the hardware
 
-![Circuit diagram](./images_readme/solar_shematic.jpg)
+![Circuit diagram](img/solar_shematic.jpg)
 
 This is the circuit diagram of our project. Everything is connected with cables and jumper wires to a breadboard. Both ends of the LDRs are soldered to a wire inside of an ethernet cable.
 
-![Backside](./images_readme/connecties_achterkant.jpg)
+![Backside](img/connecties_achterkant.jpg)
 
 This is how it looks from the backside. The servos are connected with the solar panel with the help of the 3D printed components (green and yellow). The solar panel and LDRs are attached to a wooden plate. Make sure that the servos are kept well in place, you don't want them to move around. You can also see the ethernet cable coming from the LDRs and going inside the box. Make sure that enough cable is left over, otherwise the servos could get stuck.
 
@@ -57,11 +59,15 @@ mbed compile --target NUCLEO_L476RG --toolchain GCC_ARM --flash
 
 The code should compile automatically, and the bin file will be flashed to the Nucleo.
 
+---
+
 ## Setting op the Raspberry Pi
 
 ### Setting up the VSCode connection with the Raspberry Pi via SSH
 
 ### Running the Python script
+
+---
 
 ## Netlify
 

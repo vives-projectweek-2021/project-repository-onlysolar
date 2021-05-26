@@ -1,0 +1,34 @@
+{
+  "name": "OnlySolar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint-markdown": "markdownlint **/*.md",
+    "lint": "npm run lint-markdown"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vives-projectweek-2021/project-repository-onlysolar.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {},
+  "homepage": "https://github.com/vives-projectweek-2021/project-repository-onlysolar#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged --quiet"
+    }
+  },
+  "lint-staged": {
+    "*.md": "markdownlint **/*.md"
+  },
+  "dependencies": {
+    "husky": "^4.3.5",
+    "lint-staged": "^10.5.3",
+    "markdownlint": "^0.22.0",
+    "markdownlint-cli": "^0.25.0"
+  }
+}
