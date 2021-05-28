@@ -61,7 +61,7 @@ The code should compile automatically, and the bin file will be flashed to the N
 
 ---
 
-## Setting op the Raspberry Pi
+## Setting up the Raspberry Pi
 
 First things first in setting up the Raspberry Pi, cloning our repository to find the correct code to copy to your own Pi. To accomplish this you can follow the steps below in a terminal in the desired location on your local computer.
 
